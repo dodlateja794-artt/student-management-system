@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+         body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: aliceblue;
+        }
+        .teja{
+            border: 2px solid black;
+            min-height: 250px;
+            width: 100%;
+            max-width: 350px;
+            margin-top: 100px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            background-color: white;
+        }
+    
+        button{
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: brown;
+        }
+        input:focus{
+            outline: none;
+            border: 2px solid black;
+            box-shadow: 0px 0px 5px grey;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="teja">
+    <h2 style="color: rgb(45, 6, 6);font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><u>LOGIN PAGE</u></h2><br><br>
+    <form method="POST">
+   {% csrf_token %}
+     <i class="fa-solid fa-users"></i> Username: 
+    <input type="text" placeholder="enter username" name="username" class="form-control mb-3"><br>
+      <i class="fa-solid fa-lock"></i> Password:
+    <input type="password" placeholder="enter password" name="password" class="form-control mb-3"><br><br>
+   <button type="submit" class="btn btn-dark w-100">Login</button>
+    </form>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    </div>
+    </center>
+</body>
+</html>
