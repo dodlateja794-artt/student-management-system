@@ -4,6 +4,23 @@
 
 Student Management System is a Django-based web application designed to manage student records efficiently. The system allows administrators to add, view, update, search, and delete student information through a user-friendly interface.
 
+## Screenshots
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Add Student Page
+![Add Student Page](screenshots/addstudent.png)
+
+### student list
+![Add student list](screenshots/student-list.png)
+
+### Edit Student Page
+![Edit Student Page](screenshots/edit.png)
+
 ## Features
 
 * Add Student Records
