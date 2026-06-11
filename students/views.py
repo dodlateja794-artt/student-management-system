@@ -35,7 +35,7 @@ def user_logout(request):
 def delete_student(request, id):
     student = get_object_or_404(Student,id=id)   
     student.delete()  
-    messages.success(request,"student deleted succesfully")               
+    messages.success(request,"student deleted succesfully!")               
     return redirect('/')
 
 @login_required
